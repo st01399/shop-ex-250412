@@ -33,7 +33,10 @@ public class Delivery {
     public void onPostPersist() {
         DeliveryStarted deliveryStarted = new DeliveryStarted(this);
         deliveryStarted.publishAfterCommit();
+    }
 
+    @PreRemove
+    public void onPreRemove() {
         DeliveryCanceled deliveryCanceled = new DeliveryCanceled(this);
         deliveryCanceled.publishAfterCommit();
     }
@@ -49,11 +52,15 @@ public class Delivery {
     public static void startDelivery(OrderPlaced orderPlaced) {
         //implement business logic here:
 
-        /** Example 1:  new item 
+       
         Delivery delivery = new Delivery();
+        delivery.setOrderId(orderPlaced.getId());
+        delivery.setCustomerId(orderPlaced.getCustomerId());
+        delivery.setAddress(orderPlaced.getAddress());
+        delivery.setStatus("DELIVERY STARTED");
         repository().save(delivery);
 
-        */
+        
 
         /** Example 2:  finding and process
         
