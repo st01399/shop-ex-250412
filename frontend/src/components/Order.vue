@@ -1,13 +1,13 @@
 <template>
     <div>
         <String
-            label="Customerid"
-            v-model="value.customerid"
+            label="CustomerId"
+            v-model="value.customerId"
             :editMode="editMode"
         />
         <String
-            label="Productid"
-            v-model="value.productid"
+            label="ProductId"
+            v-model="value.productId"
             :editMode="editMode"
         />
         <Number

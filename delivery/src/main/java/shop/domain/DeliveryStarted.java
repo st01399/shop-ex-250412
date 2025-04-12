@@ -12,6 +12,9 @@ import shop.infra.AbstractEvent;
 public class DeliveryStarted extends AbstractEvent {
 
     private Long id;
+    private Long orderId;
+    private String customerId;
+    private String address;
 
     public DeliveryStarted(Delivery aggregate) {
         super(aggregate);

@@ -12,6 +12,10 @@ import shop.infra.AbstractEvent;
 public class OrderCanceled extends AbstractEvent {
 
     private Long id;
+    private String customerId;
+    private String productId;
+    private Integer qty;
+    private String address;
 
     public OrderCanceled(Order aggregate) {
         super(aggregate);

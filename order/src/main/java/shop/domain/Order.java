@@ -21,9 +21,9 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String customerid;
+    private String customerId;
 
-    private String productid;
+    private String productId;
 
     private Integer qty;
 

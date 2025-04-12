@@ -25,8 +25,8 @@
                     <thead>
                         <tr>
                         <th>Id</th>
-                        <th>Customerid</th>
-                        <th>Productid</th>
+                        <th>CustomerId</th>
+                        <th>ProductId</th>
                         <th>Qty</th>
                         <th>Address</th>
                         <th>Status</th>
@@ -39,8 +39,8 @@
                             :style="val === selectedRow ? 'background-color: rgb(var(--v-theme-primary), 0.2) !important;':''"
                         >
                             <td class="font-semibold">{{ idx + 1 }}</td>
-                            <td class="whitespace-nowrap" label="Customerid">{{ val.customerid }}</td>
-                            <td class="whitespace-nowrap" label="Productid">{{ val.productid }}</td>
+                            <td class="whitespace-nowrap" label="CustomerId">{{ val.customerId }}</td>
+                            <td class="whitespace-nowrap" label="ProductId">{{ val.productId }}</td>
                             <td class="whitespace-nowrap" label="Qty">{{ val.qty }}</td>
                             <td class="whitespace-nowrap" label="Address">{{ val.address }}</td>
                             <td class="whitespace-nowrap" label="Status">{{ val.status }}</td>
@@ -105,8 +105,8 @@
                     </v-toolbar>
                     <v-card-text>
                         <div>
-                            <String label="Customerid" v-model="selectedRow.customerid" :editMode="true"/>
-                            <String label="Productid" v-model="selectedRow.productid" :editMode="true"/>
+                            <String label="CustomerId" v-model="selectedRow.customerId" :editMode="true"/>
+                            <String label="ProductId" v-model="selectedRow.productId" :editMode="true"/>
                             <Number label="Qty" v-model="selectedRow.qty" :editMode="true"/>
                             <String label="Address" v-model="selectedRow.address" :editMode="true"/>
                             <String label="Status" v-model="selectedRow.status" :editMode="true"/>

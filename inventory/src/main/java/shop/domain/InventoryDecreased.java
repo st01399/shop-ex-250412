@@ -12,6 +12,7 @@ import shop.infra.AbstractEvent;
 public class InventoryDecreased extends AbstractEvent {
 
     private Long id;
+    private String stock;
 
     public InventoryDecreased(Order aggregate) {
         super(aggregate);

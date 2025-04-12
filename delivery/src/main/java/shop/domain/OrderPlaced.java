@@ -10,8 +10,8 @@ import shop.infra.AbstractEvent;
 public class OrderPlaced extends AbstractEvent {
 
     private Long id;
-    private String customerid;
-    private String productid;
+    private String customerId;
+    private String productId;
     private Integer qty;
     private String address;
 }
