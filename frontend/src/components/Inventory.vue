@@ -1,6 +1,6 @@
 <template>
     <div>
-        <String
+        <Number
             label="Stock"
             v-model="value.stock"
             :editMode="editMode"

@@ -21,7 +21,7 @@ public class Inventory {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String stock;
+    private Long stock;
 
     @PostPersist
     public void onPostPersist() {

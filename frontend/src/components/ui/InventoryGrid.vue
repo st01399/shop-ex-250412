@@ -97,7 +97,7 @@
                     </v-toolbar>
                     <v-card-text>
                         <div>
-                            <String label="Stock" v-model="selectedRow.stock" :editMode="true"/>
+                            <Number label="Stock" v-model="selectedRow.stock" :editMode="true"/>
                             <v-divider class="border-opacity-100 my-divider"></v-divider>
                             <v-layout row justify-end>
                                 <v-btn
