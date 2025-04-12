@@ -75,17 +75,17 @@ public class Inventory {
 
         */
 
-        /** Example 2:  finding and process
         
 
-        repository().findById(orderCanceled.get???()).ifPresent(inventory->{
+        repository().findById(Long.valueOf(orderCanceled.getProductId())).ifPresent(inventory->{
             
-            inventory // do something
+            inventory.setStock(inventory.getStock() + orderCanceled.getQty());
             repository().save(inventory);
 
+            InventoryIncreased inventoryIncreased = new InventoryIncreased(inventory);
+            inventoryIncreased.publishAfterCommit();
 
          });
-        */
 
     }
     //>>> Clean Arch / Port Method
