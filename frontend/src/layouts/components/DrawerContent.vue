@@ -25,7 +25,7 @@ import {
         <VerticalNavLink
             :item="{
                 title: 'Inventory',
-                to: '/orders',
+                to: '/inventories',
             }"
         />
     </ul>

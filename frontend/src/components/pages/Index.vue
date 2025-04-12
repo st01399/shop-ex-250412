@@ -42,7 +42,7 @@ export default {
       },
       {
           text: "Inventory",
-          link: "/orders",
+          link: "/inventories",
       },
     ],
   }),

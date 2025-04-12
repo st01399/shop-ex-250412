@@ -18,7 +18,7 @@ import shop.domain.*;
 public class PolicyHandler {
 
     @Autowired
-    OrderRepository orderRepository;
+    InventoryRepository inventoryRepository;
 
     @StreamListener(KafkaProcessor.INPUT)
     public void whatever(@Payload String eventString) {}
@@ -36,7 +36,7 @@ public class PolicyHandler {
         );
 
         // Sample Logic //
-        Order.decreaseInventory(event);
+        Inventory.decreaseInventory(event);
     }
 
     @StreamListener(
@@ -52,7 +52,7 @@ public class PolicyHandler {
         );
 
         // Sample Logic //
-        Order.increaseInventory(event);
+        Inventory.increaseInventory(event);
     }
 }
 //>>> Clean Arch / Inbound Adaptor

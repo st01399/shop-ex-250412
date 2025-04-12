@@ -16,8 +16,8 @@ const router = createRouter({
       component: () => import('../components/ui/DeliveryGrid.vue'),
     },
     {
-      path: '/orders',
-      component: () => import('../components/ui/OrderGrid.vue'),
+      path: '/inventories',
+      component: () => import('../components/ui/InventoryGrid.vue'),
     },
   ],
 })
