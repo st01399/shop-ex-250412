@@ -28,8 +28,6 @@ public class Inventory {
     @PostPersist
     public void onPostPersist() {
 
-        InventoryIncreased inventoryIncreased = new InventoryIncreased(this);
-        inventoryIncreased.publishAfterCommit();
         
     }
 
