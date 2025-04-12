@@ -26,6 +26,7 @@
                         <tr>
                         <th>Id</th>
                         <th>Stock</th>
+                        <th>Name</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -36,6 +37,7 @@
                         >
                             <td class="font-semibold">{{ idx + 1 }}</td>
                             <td class="whitespace-nowrap" label="Stock">{{ val.stock }}</td>
+                            <td class="whitespace-nowrap" label="Name">{{ val.name }}</td>
                             <v-row class="ma-0 pa-4 align-center">
                                 <v-spacer></v-spacer>
                                 <Icon style="cursor: pointer;" icon="mi:delete" @click="deleteRow(val)" />
@@ -98,6 +100,7 @@
                     <v-card-text>
                         <div>
                             <Number label="Stock" v-model="selectedRow.stock" :editMode="true"/>
+                            <String label="Name" v-model="selectedRow.name" :editMode="true"/>
                             <v-divider class="border-opacity-100 my-divider"></v-divider>
                             <v-layout row justify-end>
                                 <v-btn

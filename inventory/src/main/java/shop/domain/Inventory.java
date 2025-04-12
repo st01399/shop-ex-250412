@@ -23,6 +23,8 @@ public class Inventory {
 
     private Long stock;
 
+    private String name;
+
     @PostPersist
     public void onPostPersist() {
         InventoryDecreased inventoryDecreased = new InventoryDecreased(this);

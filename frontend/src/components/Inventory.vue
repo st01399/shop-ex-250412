@@ -5,6 +5,11 @@
             v-model="value.stock"
             :editMode="editMode"
         />
+        <String
+            label="Name"
+            v-model="value.name"
+            :editMode="editMode"
+        />
         <v-row class="ma-0 pa-0">
             <v-spacer></v-spacer>
             <v-btn width="64px" color="primary" @click="save">
